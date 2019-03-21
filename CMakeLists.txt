@@ -9,4 +9,4 @@ add_library( account_snapshot_plugin
 target_link_libraries( account_snapshot_plugin chain_plugin appbase )
 target_include_directories( account_snapshot_plugin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include" )
 
-eosio_additional_plugin(zmq_plugin)
+eosio_additional_plugin(account_snapshot_plugin)

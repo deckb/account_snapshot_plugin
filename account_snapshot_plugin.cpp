@@ -118,7 +118,7 @@ void account_snapshot_plugin::plugin_initialize(const variables_map &options)
 	  my->on_accepted_transaction( t );
     } ));
     */
-  my->applied_transaction_connection.emplace(chain.applied_transaction.connect([&](const transaction_trace_ptr &p, const signed_transaction & > t) {
+  my->applied_transaction_connection.emplace(chain.applied_transaction.connect([&](std::tuple<const transaction_trace_ptr &, const signed_transaction &> t) {
     my->on_applied_transaction(std::get<0>(t));
   }));
 }

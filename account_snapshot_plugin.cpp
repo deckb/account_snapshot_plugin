@@ -78,7 +78,7 @@ public:
   }
 
 private:
-  // const account_name NEW_ACCOUNT = "newaccount";
+  const account_name NEW_ACCOUNT = N("newaccount");
   std::ofstream account_file;
   boost::mutex flock;
 };
